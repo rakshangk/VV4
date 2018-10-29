@@ -65,6 +65,25 @@ class SignUpLayout extends State<SignUp> {
         ),
       ),
     );
+
+    final buttonCameraAccess = Padding(
+      padding: EdgeInsets.symmetric(vertical: 0.0),
+      child: Material(
+        borderRadius: BorderRadius.circular(0.0),
+        shadowColor: Colors.lightBlueAccent.shade100,
+        elevation: 5.0,
+        child: MaterialButton(
+          minWidth: 200.0,
+          height: 50.0,
+          color: Colors.blueGrey,
+          child: Text('Capture Image', style: TextStyle(color: Colors.white)),
+          onPressed: () {
+            Navigator.of(context).pushNamed('Layouts/CameraAccessLayout');
+          },
+        ),
+      ),
+    );
+
     final buttonHaveAccount = Padding(
       padding: EdgeInsets.symmetric(vertical: 0.0),
       child: Material(
@@ -104,6 +123,8 @@ class SignUpLayout extends State<SignUp> {
               textboxMobile,
               SizedBox(height: 8.0),
               buttonSignUp,
+              SizedBox(height: 8.0),
+              buttonCameraAccess,
               SizedBox(height: 8.0),
               buttonHaveAccount,
               SizedBox(height: 24.0),
