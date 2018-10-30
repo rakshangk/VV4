@@ -78,7 +78,7 @@ class SignUpLayout extends State<SignUp> {
           color: Colors.blueGrey,
           child: Text('Capture Image', style: TextStyle(color: Colors.white)),
           onPressed: () {
-            Navigator.of(context).pushNamed('Layouts/CameraAccessLayout');
+            Navigator.of(context).pushNamed('Layouts/ShoutForFood');
           },
         ),
       ),
